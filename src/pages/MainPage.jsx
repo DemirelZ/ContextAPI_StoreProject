@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Card from '../components/Card';
+// import { Navigate } from 'react-router-dom';
 const MainPage = () => {
 
     const [products, setProducts] = useState([]);
@@ -10,6 +11,7 @@ const MainPage = () => {
 
         axios.get("https://fakestoreapi.com/products")
         .then((res)=>setProducts(res.data))
+       
         
         
     }, [])
